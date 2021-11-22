@@ -123,7 +123,7 @@ var push_to_firebase = function(data){
            "nacimiento": nacimiento.value,
           "telefono": telefono.value,
             "email": email.value,
-            "primara": primara.value,
+            "primaria": primaria.value,
             "secundaria": secundaria.value,
             "bachillerato": bachillerato.value,
             "tecnica": tecnica.value,
