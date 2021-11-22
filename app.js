@@ -1,9 +1,16 @@
-function validateForm() {
-  var x = document.forms["formato"]["nombre"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
+function required()
+{
+var empt = document.forms["formato"]["nombre"].value;
+if (empt == "")
+{
+alert("Please input a Value");
+return false;
+}
+else 
+{
+alert('Code has accepted : you can try another');
+return true; 
+}
 }
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
