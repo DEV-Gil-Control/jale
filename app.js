@@ -1,7 +1,5 @@
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-var validate = function(){
-
-(function () {
+var validate = (function () {
   'use strict'
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -20,7 +18,7 @@ var validate = function(){
       }, false)
     })
 })()
-
+};
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
@@ -99,8 +97,3 @@ var push_to_firebase = function(data){
         push_to_firebase(data);
 };
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
-
-
-
-
-
