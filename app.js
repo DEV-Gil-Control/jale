@@ -28,7 +28,7 @@ var push_to_firebase = function(data){
         var db = firebase.firestore();
 
         db.collection("messages").add({
-           nombre: data["nombre"],
+           nombres: data["nombres"],
             apaterno: data["apaterno"],
             amaterno: data["amaterno"],
            nacimiento: data["nacimiento"], 
@@ -65,7 +65,7 @@ var push_to_firebase = function(data){
 
       var contact_submit = function(){
          
-         var nombre = document.getElementById("nombre");
+         var nombres = document.getElementById("nombres");
          var apaterno = document.getElementById("apaterno");
          var amaterno = document.getElementById("amaterno");
          var nacimiento = document.getElementById("nacimiento");
@@ -91,7 +91,7 @@ var push_to_firebase = function(data){
          var comentario = document.getElementById("comentario");
 
         var data = {
-         "nombre": nombre.value,
+         "nombres": nombres.value,
           "apaterno": apaterno.value,
           "amaterno": amaterno.value,
            "nacimiento": nacimiento.value,
