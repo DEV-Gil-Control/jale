@@ -2,10 +2,12 @@
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
-var push_to_firebase = function(data){
+var push_to_firebase = function(data){  
   
+        alert("Registro creado exitosamente, espera noticias pronto")
+        var db = firebase.firestore();
   
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
 
@@ -25,10 +27,6 @@ var push_to_firebase = function(data){
       }, false)
     })
 })()
-  
-  
-        alert("Registro creado exitosamente, espera noticias pronto")
-        var db = firebase.firestore();
 
         db.collection("messages").add({
            
