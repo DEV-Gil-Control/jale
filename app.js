@@ -8,7 +8,7 @@
   // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
-      form.addEventListener('contact_submit', function () {
+      form.addEventListener('submit', function () {
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
