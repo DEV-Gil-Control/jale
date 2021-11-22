@@ -53,7 +53,7 @@ var get_user = function(email) {
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
-        alert("Registro creado exitosamente, continúa para descargar el documento")
+        alert("Registro creado exitosamente, espera noticias pronto")
         var db = firebase.firestore();
 
         db.collection("messages").add({
@@ -85,7 +85,7 @@ var push_to_firebase = function(data){
             location.reload();
         })
         .catch(function(error) {
-            console.error("Message could not be sent: ", error);
+            console.error("No se pudo enviar el mensaje: ", error);
         });
       }
 
