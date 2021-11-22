@@ -9,7 +9,7 @@ var push_to_firebase = function(data){
         db.collection("messages").add({
            nombre: data["nombre"],
             apaterno: data["apaterno"],
-            amaternomenor: data["amaternomenor"],
+            amaterno: data["amaterno"],
            nacimiento: data["nacimiento"], 
            telefono: data["telefono"],
            email: data["email"],
