@@ -1,5 +1,3 @@
-
-
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
@@ -115,6 +113,6 @@ var push_to_firebase = function(data){
         }
 
         form.classList.add('was-validated')
-      }, false)
+      }, true)
     })
 })()
