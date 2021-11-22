@@ -53,7 +53,7 @@ var push_to_firebase = function(data){
         });
       }
 
-      var submit = function(){
+      var contact_submit = function(){
          
          
          var apaterno = document.getElementById("apaterno");
