@@ -31,18 +31,21 @@
   <div class="form-row">
     <div class="form-group col-md-4">
       <label for="nombre">Nombre(s)</label>
-      <input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre o Nombres" required>
+      <input type="text" class="form-control" id="nombre" placeholder="Nombre o Nombres" required>
+      <div class="invalid-feedback">
+      Favor de llenar.
     </div>
-    
+    </div>
     <div class="form-group col-md-4">
       <label for="apaterno">Apellido Paterno</label>
-      <input type="text" id="apaterno" class="form-control" name="apaterno" placeholder="Apellido Paterno">
-
-      
+      <input type="text" class="form-control" id="apaterno" placeholder="Apellido Paterno">
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
     <div class="form-group col-md-4">
-      <label for="amaterno">Apellido Materno</label>
-      <input type="text" id="amaterno" class="form-control" name="amaterno" placeholder="Apellido Materno">
+      <label for="amataerno">Apellido Materno</label>
+      <input type="text" class="form-control" id="amataerno" placeholder="Apellido Materno">
             <div class="invalid-feedback">
       Favor de llenar.
     </div>
@@ -51,22 +54,24 @@
 <div class="form-row">
     <div class="form-group col-md-4">
       <label for="nacimiento">Fecha de Nacimiento</label>
-      <input type="date" id="nacimiento" class="form-control" name="nacimiento" placeholder="Fecha de Nacimiento">
+      <input type="date" class="form-control" id="nacimiento" placeholder="Fecha de Nacimiento">
             <div class="invalid-feedback">
       Favor de llenar.
     </div>
     </div>
     <div class="form-group col-md-4">
       <label for="telefono">Teléfono</label>
-      <input type="phone" id="telefono" class="form-control" name="telefono" placeholder="Tel. 10 números">
-
-      
+      <input type="phone" class="form-control" id="telefono" placeholder="Tel. 10 números">
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
     <div class="form-group col-md-4">
       <label for="email">Correo</label>
-      <input type="email" id="email" class="form-control" name="email" placeholder="Correo">
-
-      
+      <input type="email" class="form-control" id="email" placeholder="Correo">
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
   </div>
 
@@ -78,67 +83,73 @@
 
   <div class="form-group col-md-2">
     <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="primaria" name="primaria">
+      <input class="form-check-input" type="checkbox" id="primaria">
       <label class="form-check-label" for="primara">
         Primaria
       </label>
-
-      
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
     </div>
 
   <div class="form-group col-md-2">
     <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="secundaria" name="secundaria">
+      <input class="form-check-input" type="checkbox" id="secundaria">
       <label class="form-check-label" for="secundaria">
         Secundaria
       </label>
-
-      
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
   </div>
 
     <div class="form-group col-md-2">
     <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="bachillerato" name="bachillerato">
+      <input class="form-check-input" type="checkbox" id="bachillerato">
       <label class="form-check-label" for="bachillerato">
         Bachillerato
       </label>
-
-      
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
   </div>
 
     <div class="form-group col-md-2">
     <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="tecnica" name="tecnica">
+      <input class="form-check-input" type="checkbox" id="tecnica">
       <label class="form-check-label" for="tecnica">
         Técnica
       </label>
-
-      
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
   </div>
 
     <div class="form-group col-md-2">
     <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="licenciatura" name="licenciatura">
+      <input class="form-check-input" type="checkbox" id="licenciatura">
       <label class="form-check-label" for="licenciatura">
         Licenciatura
       </label>
-
-      
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
   </div>
 
     <div class="form-group col-md-2">
     <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="otro" name="otro">
+      <input class="form-check-input" type="checkbox" id="otro">
       <label class="form-check-label" for="otro">
         Otro
       </label>
-            
-      
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
   </div>
 
@@ -152,18 +163,20 @@
   <div class="form-row">
     <div class="form-group col-md-8">
       <label for="domicilio">Domicilio, Calle y Número</label>
-      <input type="text" id="domicilio" class="form-control" name="domicilio" placeholder="Calle, numero exterior y numero interior">
-            
-      
+      <input type="text" class="form-control" id="domicilio" placeholder="Calle, numero exterior y numero interior">
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
 <div class="form-group col-md-4">
       <label for="colonia">Colonia</label>
-      <select id="colonia" name="colonia" class="form-control">
+      <select id="colonia" class="form-control">
         <option selected>Selecciona tu colonia...</option>
         <option>...</option>
       </select>
-            
-  
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
   </div>
 
@@ -171,28 +184,31 @@
    <div class="form-row">
 <div class="form-group col-md-4">
       <label for="estado">Estado</label>
-      <select id="estado" name="estado" class="form-control">
+      <select id="estado" class="form-control">
         <option selected>Selecciona tu estado...</option>
         <option>...</option>
       </select>
-            
-  
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
 <div class="form-group col-md-4">
       <label for="municipio">Municipio</label>
-      <select id="municipio" name="municipio" class="form-control">
+      <select id="municipio" class="form-control">
         <option selected>Selecciona tu municipio...</option>
         <option>...</option>
-              
-        
+              <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
       </select>
     </div>
 
     <div class="form-group col-md-4">
       <label for="nombre">Código Postal</label>
-      <input type="text" id="codigo" class="form-control" name="codigo" placeholder="Código">
-            
-      
+      <input type="text" class="form-control" id="codigo" placeholder="Código">
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
 
   </div> 
@@ -214,8 +230,9 @@
       <label class="form-check-label" for="completo">
         Completo
       </label>
-            
-      
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
     </div>
 
@@ -233,18 +250,19 @@
 
     <div class="form-group col-md-2">
     <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="vespertino" name="vespertino">
+      <input class="form-check-input" type="checkbox" id="vespertino">
       <label class="form-check-label" for="vespertino">
         Medio tiempo vespertino
       </label>
-            
-      
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
   </div>
 
     <div class="form-group col-md-2">
     <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="nocturno" name="nocturno">
+      <input class="form-check-input" type="checkbox" id="nocturno">
       <label class="form-check-label" for="nocturno">
         Nocturno
       </label>
@@ -253,12 +271,13 @@
 
     <div class="form-group col-md-2">
     <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="cualquiera" name="cualquiera">
+      <input class="form-check-input" type="checkbox" id="cualquiera">
       <label class="form-check-label" for="cualquiera">
         Cualquiera
       </label>
-
-      
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
   </div>
 
@@ -268,12 +287,14 @@
 
     <div class="form-group col-md-6">
        <label>¿Qué sueldo estás buscando?</label>
-      <input type="text" id="sueldomes" class="form-control" name="sueldomes" placeholder="$">
-           
-      
+      <input type="text" class="form-control" id="sueldomes" placeholder="$">
+            <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
     </div>
 
-<!-- <div class="form-group col-md-6">
+
+    <div class="form-group col-md-6">
        <label>Carga tu curriculum vitae en formato PDF</label>
      <div class="custom-file">
     <input type="file" class="custom-file-input" id="validatedCustomFile" required>
@@ -283,14 +304,14 @@
     </div>
   </div>
   </div>
- </div> -->
+ </div>
 
 
 <div class="form-row">
 
     <div class="form-group col-md-12">
        <label>¿Deseas dejar alguna nota o comentario?</label>
-      <input type="text" id="comentario" class="form-control" name="comentario" placeholder="Escribe aquí tu comentario">
+      <input type="text" class="form-control" id="comentario" placeholder="Escribe aquí tu comentario">
     </div>
 
  </div>
@@ -357,8 +378,7 @@ El presente aviso de privacidad puede sufrir modificaciones, cambios o actualiza
     </div>
     </div>
 
- <button class="btn btn-primary btn-sm" onclick="contact_submit();">Guardar</button>
-
+ <button class="btn btn-primary btn-lg btn-block" onclick="contact_submit();">Enviar ahora</button>
 </form>
  <div style="padding-bottom: 2em;"></div>
 
@@ -378,12 +398,3 @@ El presente aviso de privacidad puede sufrir modificaciones, cambios o actualiza
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
