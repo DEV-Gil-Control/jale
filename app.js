@@ -1,3 +1,14 @@
+function toSubmit(){
+     if(document.getElementById('nombre').value == "tushar"){
+      alert("success");
+      return true;
+     }
+     else{
+        alert("failed");
+        return false;
+     }
+   }
+
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){  
