@@ -1,4 +1,11 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+
+
+//- - - - - - - - -  Push Data - - - - - - - - - - - -//
+
+var push_to_firebase = function(data){
+  
+  
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
 
@@ -18,10 +25,8 @@
       }, false)
     })
 })()
-
-//- - - - - - - - -  Push Data - - - - - - - - - - - -//
-
-var push_to_firebase = function(data){
+  
+  
         alert("Registro creado exitosamente, espera noticias pronto")
         var db = firebase.firestore();
 
