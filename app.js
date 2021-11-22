@@ -26,7 +26,7 @@ var push_to_firebase = function(data){
         var db = firebase.firestore();
 
         db.collection("messages").add({
-           nombres: data["nombres"],
+           
             apaterno: data["apaterno"],
             amaterno: data["amaterno"],
            nacimiento: data["nacimiento"], 
@@ -50,6 +50,7 @@ var push_to_firebase = function(data){
                 cualquiera: data["cualquiera"],
                 sueldomes: data["sueldomes"],
                 comentario: data["comentario"],
+          nombres: data["nombres"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -63,7 +64,7 @@ var push_to_firebase = function(data){
 
       var contact_submit = function(){
          
-         var nombres = document.getElementById("nombres");
+         
          var apaterno = document.getElementById("apaterno");
          var amaterno = document.getElementById("amaterno");
          var nacimiento = document.getElementById("nacimiento");
@@ -87,9 +88,10 @@ var push_to_firebase = function(data){
          var cualquiera = document.getElementById("cualquiera");
          var sueldomes = document.getElementById("sueldomes");
          var comentario = document.getElementById("comentario");
+        var nombres = document.getElementById("nombres");
 
         var data = {
-         "nombres": nombres.value,
+         
           "apaterno": apaterno.value,
           "amaterno": amaterno.value,
            "nacimiento": nacimiento.value,
@@ -112,6 +114,7 @@ var push_to_firebase = function(data){
            "nocturno": nocturno.value,
            "cualquiera": cualquiera.value,
            "sueldomes": sueldomes.value,
+          "nombres": nombres.value,
            "comentario": comentario.value
         }
         push_to_firebase(data);
