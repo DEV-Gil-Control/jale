@@ -73,87 +73,24 @@
       Favor de llenar.
     </div>
     </div>
-  </div>
 
-<div class="form-row">
 
-  <div class="form-group col-md-2">
-  <label>Grado de estudios</label>
-  </div>
+<div class="form-group col-md-12">
+      <label for="estudios">Selecciona tu último grado de estudios</label>
+      <select id="estudios" class="form-control">
+        <option>Primaria</option>
+<option>Secundaria</option>
+<option>Bachiller</option>
+<option>Técnica</option>
+<option>Licenciatura</option>
+<option>Otros</option>
 
-  <div class="form-group col-md-2">
-    <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="primaria">
-      <label class="form-check-label" for="primara">
-        Primaria
-      </label>
+      </select>
             <div class="invalid-feedback">
       Favor de llenar.
     </div>
     </div>
-    </div>
-
-  <div class="form-group col-md-2">
-    <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="secundaria">
-      <label class="form-check-label" for="secundaria">
-        Secundaria
-      </label>
-            <div class="invalid-feedback">
-      Favor de llenar.
-    </div>
-    </div>
-  </div>
-
-    <div class="form-group col-md-2">
-    <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="bachillerato">
-      <label class="form-check-label" for="bachillerato">
-        Bachillerato
-      </label>
-            <div class="invalid-feedback">
-      Favor de llenar.
-    </div>
-    </div>
-  </div>
-
-    <div class="form-group col-md-2">
-    <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="tecnica">
-      <label class="form-check-label" for="tecnica">
-        Técnica
-      </label>
-            <div class="invalid-feedback">
-      Favor de llenar.
-    </div>
-    </div>
-  </div>
-
-    <div class="form-group col-md-2">
-    <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="licenciatura">
-      <label class="form-check-label" for="licenciatura">
-        Licenciatura
-      </label>
-            <div class="invalid-feedback">
-      Favor de llenar.
-    </div>
-    </div>
-  </div>
-
-    <div class="form-group col-md-2">
-    <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="otro">
-      <label class="form-check-label" for="otro">
-        Otro
-      </label>
-            <div class="invalid-feedback">
-      Favor de llenar.
-    </div>
-    </div>
-  </div>
-
-  </div>
+</div>
 
   <div class="alert alert-primary" role="alert">
   CUÉNTANOS DEL LUGAR DÓNDE VIVES
@@ -218,74 +155,27 @@
   ¿QUE TIPO DE TRABAJO ESTÁS BUSCANDO?
 </div>
 
-<div class="form-row">
 
-  <div class="form-group col-md-2">
-  <label>¿Qué horario estás buscando?</label>
-  </div>
 
-  <div class="form-group col-md-2">
-    <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="completo">
-      <label class="form-check-label" for="completo">
-        Completo
-      </label>
-            <div class="invalid-feedback">
-      Favor de llenar.
-    </div>
-    </div>
-    </div>
-
-  <div class="form-group col-md-2">
-    <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="matutino">
-      <label class="form-check-label" for="matutino">
-        Medio tiempo matutino
-      </label>
-            <div class="invalid-feedback">
-      Favor de llenar.
-    </div>
-    </div>
-  </div>
-
-    <div class="form-group col-md-2">
-    <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="vespertino">
-      <label class="form-check-label" for="vespertino">
-        Medio tiempo vespertino
-      </label>
-            <div class="invalid-feedback">
-      Favor de llenar.
-    </div>
-    </div>
-  </div>
-
-    <div class="form-group col-md-2">
-    <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="nocturno">
-      <label class="form-check-label" for="nocturno">
-        Nocturno
-      </label>
-    </div>
-  </div>
-
-    <div class="form-group col-md-2">
-    <div class="form-check">  
-      <input class="form-check-input" type="checkbox" id="cualquiera">
-      <label class="form-check-label" for="cualquiera">
-        Cualquiera
-      </label>
-            <div class="invalid-feedback">
-      Favor de llenar.
-    </div>
-    </div>
-  </div>
-
-  </div>
 
 <div class="form-row">
 
-    <div class="form-group col-md-6">
+
+<div class="form-group col-md-4">
+      <label for="horario">¿Qué turno estás buscando?</label>
+      <select id="horario" class="form-control">
+        <option>Completo</option>
+        <option>Matutino</option>
+        <option>Vespertino</option>
+        <option>Nocturno</option>
+        <option>Cualquier turno</option>
+              <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4">
        <label>¿Qué sueldo estás buscando?</label>
       <input type="text" class="form-control" id="sueldomes" placeholder="$">
             <div class="invalid-feedback">
@@ -294,7 +184,7 @@
     </div>
 
 
- <!--   <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
        <label>Carga tu curriculum vitae en formato PDF</label>
      <div class="custom-file">
     <input type="file" class="custom-file-input" id="validatedCustomFile" required>
@@ -304,7 +194,7 @@
     </div>
   </div>
   </div>
- </div> -->
+ </div>
 
 
 <div class="form-row">
