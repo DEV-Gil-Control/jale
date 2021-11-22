@@ -8,7 +8,7 @@
   // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
-      form.addEventListener('submit', contact_submit() {
+      form.addEventListener('contact_submit', function() {
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
@@ -18,7 +18,6 @@
       }, false)
     })
 })()
-
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){  
