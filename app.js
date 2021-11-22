@@ -1,6 +1,5 @@
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-
-var validate = function(){
+var validate = (function () {
   'use strict'
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -18,7 +17,8 @@ var validate = function(){
         form.classList.add('was-validated')
       }, false)
     })
-})();
+})()
+
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
