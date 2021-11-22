@@ -13,7 +13,6 @@
           event.preventDefault()
           event.stopPropagation()
         }
-    })
 })()
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
