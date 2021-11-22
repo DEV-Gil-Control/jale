@@ -17,8 +17,7 @@ var validate = (function () {
         form.classList.add('was-validated')
       }, false)
     })
-})()
-};
+})();
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
