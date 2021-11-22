@@ -1,4 +1,6 @@
 // Example starter JavaScript for disabling form submissions if there are invalid fields
+var validate = function(){
+
 (function () {
   'use strict'
 
