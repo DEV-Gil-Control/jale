@@ -94,7 +94,7 @@ var push_to_firebase = function(data){
            "comentario": comentario.value
         }
         push_to_firebase(data);
-}
+};
       
       // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
@@ -113,6 +113,6 @@ var push_to_firebase = function(data){
         }
 
         form.classList.add('was-validated')
-      }, true)
+      }, false)
     })
 })()
