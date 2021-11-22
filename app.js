@@ -1,17 +1,23 @@
-function required()
-{
-var empt = document.forms["formato"]["nombre"].value;
-if (empt == "")
-{
-alert("Please input a Value");
-return false;
-}
-else 
-{
-alert('Code has accepted : you can try another');
-return true; 
-}
-}
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function() {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()}
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
