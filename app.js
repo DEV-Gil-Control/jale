@@ -32,22 +32,13 @@ var push_to_firebase = function(data){
            nacimiento: data["nacimiento"], 
            telefono: data["telefono"],
            email: data["email"],
-           primaria: data["primaria"],
-              secundaria: data["secundaria"],
-              bachillerato: data["bachillerato"],
-              tecnica: data["tecnica"],
-              licenciatura: data["licenciatura"],
-              otro: data["otro"],
+           estudios: data["estudios"],
               domicilio: data["domicilio"],
               colonia: data["colonia"],
               estado: data["estado"],
               municipio: data["municipio"],
               codigo: data["codigo"],
-              completo: data["completo"],
-              matutino: data["matutino"],
-           vespertino: data["vespertino"],
-           nocturno: data["nocturno"],
-                cualquiera: data["cualquiera"],
+              horario: data["horario"],
                 sueldomes: data["sueldomes"],
                 comentario: data["comentario"],
           nombres: data["nombres"],
@@ -70,22 +61,15 @@ var push_to_firebase = function(data){
          var nacimiento = document.getElementById("nacimiento");
          var telefono = document.getElementById("telefono");
          var email = document.getElementById("email");
-         var primaria = document.getElementById("primaria");
-          var secundaria = document.getElementById("secundaria");
-          var bachillerato = document.getElementById("bachillerato");
-          var tecnica = document.getElementById("tecnica");
-          var licenciatura = document.getElementById("licenciatura");
-          var otro = document.getElementById("otro");
+         var estudios = document.getElementById("estudios");
+        
           var domicilio = document.getElementById("domicilio");
           var colonia = document.getElementById("colonia");
           var estado = document.getElementById("estado");
           var municipio = document.getElementById("municipio");
           var codigo = document.getElementById("codigo");
-         var completo = document.getElementById("completo");
-         var matutino = document.getElementById("matutino");
-         var vespertino = document.getElementById("vespertino");
-         var nocturno = document.getElementById("nocturno");
-         var cualquiera = document.getElementById("cualquiera");
+         var horario = document.getElementById("horario");
+
          var sueldomes = document.getElementById("sueldomes");
          var comentario = document.getElementById("comentario");
         var nombres = document.getElementById("nombres");
@@ -97,22 +81,15 @@ var push_to_firebase = function(data){
            "nacimiento": nacimiento.value,
           "telefono": telefono.value,
             "email": email.value,
-            "primaria": primaria.value,
-            "secundaria": secundaria.value,
-            "bachillerato": bachillerato.value,
-            "tecnica": tecnica.value,
-            "licenciatura": licenciatura.value,    
-            "otro": otro.value,
+            "estudios": estudios.value,
+            
             "domicilio": domicilio.value,
             "colonia": colonia.value,
             "estado": estado.value,
             "municipio": municipio.value,
             "codigo": codigo.value,
-            "completo": completo.value,
-            "matutino": matutino.value,
-           "vespertino": vespertino.value,
-           "nocturno": nocturno.value,
-           "cualquiera": cualquiera.value,
+            "horario": horario.value,
+            
            "sueldomes": sueldomes.value,
           "nombres": nombres.value,
            "comentario": comentario.value
