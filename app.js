@@ -6,28 +6,6 @@ var push_to_firebase = function(data){
   
         alert("Registro creado exitosamente, espera noticias pronto")
         var db = firebase.firestore();
-  
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('contact_submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-
         db.collection("messages").add({
            
             apaterno: data["apaterno"],
