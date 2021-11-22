@@ -97,4 +97,4 @@ var push_to_firebase = function(data){
         }
         push_to_firebase(data);
 
-});
+};
