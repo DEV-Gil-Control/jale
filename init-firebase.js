@@ -2,7 +2,7 @@
 var firebaseConfig = {
   apiKey: "AIzaSyDJjGU7r9Dn2UsNTOrCdoHi8MDBNE31-Ic",
   authDomain: "jale-a6c26.firebaseapp.com",
-  databaseURL: "https://amparo-671eb.firebaseio.com",
+  databaseURL: "https://jale-a6c26.firebaseio.com",
   projectId: "jale-a6c26",
   storageBucket: "jale-a6c26.appspot.com",
   messagingSenderId: "125185951298",
