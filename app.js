@@ -96,10 +96,7 @@ var push_to_firebase = function(data){
            "comentario": comentario.value
         }
         push_to_firebase(data);
-          
-
       }
 
-})()
 
 
