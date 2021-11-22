@@ -5,7 +5,7 @@
 var push_to_firebase = function(data){
   
   
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
+// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
 
@@ -15,7 +15,7 @@ var push_to_firebase = function(data){
   // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
-      form.addEventListener('submit', function() {
+      form.addEventListener('contact_submit', function (event) {
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
