@@ -28,23 +28,9 @@ submitButton.addEventListener("click", (e) => {
   e.preventDefault()
 
   //Get Form Values
-  let nombres = document.getElementById('nombres').value
+  let nombres = document.getElementById('nombres').value;
   
-  //Save Form Data To Firebase
-  db.doc().set({
-    nombres: nombres,
-  }).then( () => {
-    console.log("Data saved")
-  }).catch((error) => {
-    console.log(error)
-  })
-
-  //alert
-  alert("Your Form Has Been Submitted Successfully")
-})
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
-
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
 
@@ -64,3 +50,19 @@ submitButton.addEventListener("click", (e) => {
       }, false)
     })
 })()
+  
+  //Save Form Data To Firebase
+  db.doc().set({
+    nombres: nombres,
+  }).then( () => {
+    console.log("Data saved")
+  }).catch((error) => {
+    console.log(error)
+  })
+
+  //alert
+  alert("Your Form Has Been Submitted Successfully")
+})
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
