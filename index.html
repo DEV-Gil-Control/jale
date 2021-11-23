@@ -21,23 +21,18 @@
   
 
   <script type="text/javascript">
-(function() {
-    $('form > input').change(function() {
+    
+    $('#name').bind('keyup', function() {
+    if(allFilled()) $('#sumbit').removeProp('disabled');
+});
 
-        var empty = false;
-        $('form > input').each(function() {
-            if ($(this).val() == '') {
-                empty = true;
-            }
-        });
-
-        if (empty) {
-            $('#submit').prop("disabled");
-        } else {
-            $('#submit').removeProp("disabled");
-        }
+function allFilled() {
+    var filled = true;
+    $('body input').each(function() {
+        if($(this).val() == '') filled = false;
     });
-})()
+    return filled;
+}
   </script>
   
 </head>
