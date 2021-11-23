@@ -27,12 +27,12 @@ submitButton.addEventListener("click", (e) => {
   e.preventDefault()
   
   //Get Form Values
-  let nombres = document.getElementById('nombres').value;
+  let name = document.getElementById('name').value;
   
   
   //Save Form Data To Firebase
   db.doc().set({
-    nombres: nombres,
+    nombres: name,
   }).then( () => {
     console.log("Data saved")
   }).catch((error) => {
