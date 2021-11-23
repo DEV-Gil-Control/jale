@@ -1,60 +1,108 @@
-/*Store regex expressions here*/
-const validations = {
-    username: /^[A-Za-z]{8,50}$/,
-    password: /^(?=(.*[^A-Za-z0-9]){3})(?=(.*[A-Z]){3})(?=(.*\d){3}).+/,
-    email: /^[A-Z0-9a-z._%+-]+\@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
-    pancard: /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/,
-    passport: /^[A-Z][1-9]\d\d{4}[1-9]$/
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
 }
 
-const errorStatuses = {
-    username: "Please enter a name with length greater than 8 characters but less than 50.",
-    password: "Enter a password atleast having three of each : uppercase letters, numerical digits and special characters.",
-    email: "Enter a valid E-mail Id",
-    pancard: "Please enter valid pancard number, Ex. ABCDE1213D , example shows the format not a valid pancard number.",
-    passport: "Please enter a valid passport number. Ex.R2210321"
-}
-
-/*
- optimize input validation to delay the validation
- to avoid stray keypresses.
-*/
-function debounce(func, wait, immediate) {
-    let timeout;
-    return function executedFunc() {
-        let context = this;
-        let args = arguments;
-        let later = function () {
-            timeout = null;
-            if (!immediate) {
-                func.apply(context, args);
-            }
-        }
-        let callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) {
-            func.apply(context, args);
+// Defining a function to validate form 
+function validateForm() {
+    // Retrieving the values of form elements 
+    var name = document.ApplicationForm.name.value;
+    var email = document.ApplicationForm.email.value;
+    var mobile = document.ApplicationForm.mobile.value;
+    var country = document.ApplicationForm.country.value;
+    var gender = document.ApplicationForm.gender.value;
+    var hobbies = [];
+    var checkboxes = document.getElementsByName("hobbies[]");
+    for(var i=0; i < checkboxes.length; i++) {
+        if(checkboxes[i].checked) {
+            // Populate hobbies array with selected values
+            hobbies.push(checkboxes[i].value);
         }
     }
-}
-
-const delayedValidate = debounce(function validateInput(event) {
-    const messageBox = event.target.nextElementSibling.children[0];
-    validator = validations[event.target.name];
-    let validationStatus = null;
-    if (validator) {
-        validationStatus = validator.test(event.target.value);
-    }
-    if (validationStatus === false) {
-        messageBox.innerText = errorStatuses[event.target.name];
+    
+	// Defining error variables with a default value
+    var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
+    
+    // Validate name
+    if(name == "") {
+        printError("nameErr", "Please enter your name");
     } else {
-        messageBox.innerText = "";
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(name) === false) {
+            printError("nameErr", "Please enter a valid name");
+        } else {
+            printError("nameErr", "");
+            nameErr = false;
+        }
     }
-}, 150);
 
-window.addEventListener("input", delayedValidate);
 
+     // Validate Email
+ 
+    if(email == "") {
+        printError("emailErr", "Please enter your email address");
+    } else {
+        // Regular expression for basic email validation
+         var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(regex.test(email) === false) {
+            printError("emailErr", "Please enter a valid email address");
+        } else{
+            printError("emailErr", "");
+            emailErr = false;
+        }
+    }
+    
+    
+    // Validate mobile number
+    
+     if(mobile == "") {
+        printError("mobileErr", "Please enter your mobile number");
+    } else {
+        var regex = /^[1-9]\d{9}$/;
+        if(regex.test(mobile) === false) {
+            printError("mobileErr", "Please enter a valid 10 digit mobile number");
+        } else{
+            printError("mobileErr", "");
+            mobileErr = false;
+        }
+    }
+    
+
+
+    
+    // Validate country
+    if(country == "Select") {
+        printError("countryErr", "Please select your country");
+    } else {
+        printError("countryErr", "");
+        countryErr = false;
+    }
+    
+    // Validate gender
+    if(gender == "") {
+        printError("genderErr", "Please select your gender");
+    } else {
+        printError("genderErr", "");
+        genderErr = false;
+    }
+    
+    // Prevent the form from being submitted if there are any errors
+    if((nameErr || emailErr || mobileErr || countryErr || genderErr) == true) {
+       return false;
+    } else {
+        // Creating a string from input data for preview
+        var dataPreview = "You've entered the following details: \n" +
+                          "Full Name: " + name + "\n" +
+                          "Email Address: " + email + "\n" +
+                          "Mobile Number: " + mobile + "\n" +
+                          "Country: " + country + "\n" +
+                          "Gender: " + gender + "\n";
+        if(hobbies.length) {
+            dataPreview += "Hobbies: " + hobbies.join(", ");
+        }
+        // Display input data in a dialog box before submitting the form
+        alert(dataPreview);
+    }
+};
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
