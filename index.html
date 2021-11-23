@@ -55,6 +55,25 @@
        https://firebase.google.com/docs/web/setup#config-web-app -->
 
   <script defer src="app.js"></script>
+  
+   <script>
+    $().ready(function() {
+        $('#addNew').validate({
+            rules: {
+                nombres: "required",
+            },
+            messages: {
+                patient_first_name: "Please enter first name",
+    
+            },
+            submitHandler: function(form) {
+                form.submit();
+            }
+    
+            // any other options and/or rules
+        });
+    });
+    </script>
 
 </body>
 </html>
