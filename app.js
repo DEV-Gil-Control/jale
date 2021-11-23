@@ -16,43 +16,8 @@ function validateName(x) {
     return false;
     }
     }
-    // Validate email
-    function validateEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (re.test(email)) {
-    document.getElementById('email').style.background ='#ccffcc';
-    document.getElementById('emailError').style.display = "none";
-    return true;
-    }else{
-    document.getElementById('email').style.background ='#e35152′;
-    return false;
-    }
-    }
-    // Validate Select boxes
-    function validateSelect(x) {
-    if (document.getElementById(x).selectedIndex !== 0) {
-    document.getElementById(x).style.background ='#ccffcc';
-    document.getElementById(x + 'Error').style.display = "none";
-    return true;
-    }else{
-    document.getElementById(x).style.background ='#e35152′;
-    return false;
-    }
-    }
-    function validateRadio(x) {
-    if (document.getElementById(x).checked) {
-    return true;
-    }else{
-    return false;
-    }
-    }
-    function validateCheckbox(x) {
-    if (document.getElementById(x).checked) {
-    return true;
-    }
-    return false;
-    }
-    function validateForm() {
+    
+    
     // Set error catcher
     var error = 0;
     // Check name
@@ -60,29 +25,8 @@ function validateName(x) {
     document.getElementById('nameError').style.display = "block";
     error++;
     }
-    // Validate email
-    if (!validateEmail(document.getElementById('email').value)) {
-    document.getElementById('emailError').style.display = "block";
-    error++;
-    }
-    // Validate animal dropdown box
-    if (!validateSelect('animal')) {
-    document.getElementById('animalError').style.display = "block";
-    error++;
-    }
-    // Validate Radio
-    if (validateRadio('left')) {
-
-    }else if (validateRadio('right')) {
-
-    }else{
-    document.getElementById('handError').style.display = "block";
-    error++;
-    }
-    if (!validateCheckbox('accept')) {
-    document.getElementById('termsError').style.display = "block";
-    error++;
-    }
+   
+    
     // Don't submit form if there are errors
     if (error > 0) {
     return false;
