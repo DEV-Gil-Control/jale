@@ -22,9 +22,9 @@
 
   <script type="text/javascript">
 var $input = $('input:text'),
-    $register = $('#register');    
-$register.attr('disabled', true);
+    $register = $('#register');
 
+$register.attr('disabled', true);
 $input.keyup(function() {
     var trigger = false;
     $input.each(function() {
@@ -46,19 +46,18 @@ $input.keyup(function() {
 </nav>
 
 <form>
-  <div class="alert alert-primary" role="alert">
-  CUÉNTANOS QUIÉN ERES
-</div>
-  <div class="form-row">
-    <div class="form-group col-md-12">
-      <label for="name">Nombre(s)</label>
-      <input type="text" id="name" class="form-control" >
-    </div>           
-    </div>
- <input type="submit" id="register" disabled value="Register" /> 
-<button type="button" class="btn btn-primary btn-lg btn-block" id="submit" disabled>Enviar</button>
-  
+    Username<br />
+    <input type="text" id="user_input" name="username" /><br />
+    Password<br />
+    <input type="text" id="pass_input" name="password" /><br />
+    Confirm Password<br />
+    <input type="text" id="v_pass_input" name="v_password" /><br />
+    Email<br />
+    <input type="text" id="email" name="email" /><br />     
+    <input type="submit" id="register" value="Register" />
 </form>
+
+  
  <div style="padding-bottom: 2em;"></div>
  
   <!-- The core Firebase JS SDK is always required and must be listed first -->
