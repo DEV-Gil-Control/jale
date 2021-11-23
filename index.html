@@ -25,23 +25,19 @@
   <a class="navbar-brand" href="#">BIENVENIDO, ESPERO AYUDARTE A ENCONTRAR UN BUEN JALE</a>
 </nav>
 
-<form>
-  <div class="alert alert-primary" role="alert">
-  CUÉNTANOS QUIÉN ERES
-</div>
-  <div class="form-row">
-    <div class="form-group col-md-12">
-      <label for="nombres">Nombre(s)</label>
-      <input type="text" class="form-control" id="nombres" required>
-      <div class="invalid-feedback">
-      Please provide a valid zip.
-    </div>
-    </div>
-    </div>
-  <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" >Submit</button>
+        <form id="signup" class="form">
+            <h1>Sign Up</h1>
+            <div class="form-field">
+                <label for="username">Username:</label>
+                <input type="text" name="nombres" id="nombres" autocomplete="off">
+                <small></small>
+            </div>
 
-
-</form>
+          
+            <div class="form-field">
+                <input type="submit" value="Sign Up">
+            </div>
+        </form>
  <div style="padding-bottom: 5em;"></div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
