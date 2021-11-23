@@ -22,9 +22,6 @@
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
-//Initialize Firebase 
-firebase.initializeApp(firebaseConfig);
-var firestore = firebase.firestore()
 
 //Variable to access database collection
 const db = firestore.collection("messages")
