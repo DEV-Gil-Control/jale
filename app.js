@@ -43,7 +43,7 @@ var push_to_firebase = function(data){
         alert("failed");
         return false;
      }
-   }
+   
          
          
          var apaterno = document.getElementById("apaterno");
