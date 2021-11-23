@@ -1,7 +1,7 @@
 function checkForm() {
   hideAllErrors();
   var formIsValid =
-    showErrorAndFocusIf('FieldData0', isEmpty, 'nameError')
+    showErrorAndFocusIf('name', isEmpty, 'nameError')
     && showErrorAndFocusIf('FieldData2', isEmpty, 'emailError')
     && showErrorAndFocusIf('FieldData2', isAnInvalidEmail, 'emailError2')
     && showErrorAndFocusIf('FieldData3', isEmpty, 'categoryError')
