@@ -25,25 +25,19 @@
   <a class="navbar-brand" href="#">BIENVENIDO, ESPERO AYUDARTE A ENCONTRAR UN BUEN JALE</a>
 </nav>
 
-<form class="cmxform" id="commentForm" method="get" action="">
-  <fieldset>
-    <legend>Please provide your name, email address (won't be published) and a comment</legend>
-    <p>
-      <label for="nombres">Name (required, at least 2 characters)</label>
-      <input id="nombres" name="name" minlength="2" type="text" required>
-    </p>
-    
-    
-    <p>
-      <input class="submit" id="submit" value="Submit">
-    </p>
-  </fieldset>
-</form>
-<script>
-$("#commentForm").validate();
-</script>
-
+<form>
+ <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="nombres">Nombre(s)</label>
+      <input type="text" class="form-control" id="nombres" placeholder="Nombre o Nombres" required>
+      <div class="invalid-feedback">
+      Favor de llenar.
+    </div>
+  </div>
   
+</form>
+
+  <button type="button" class="btn btn-primary btn-lg btn-block" onclick="contact_submit();">Enviar</button>
  <div style="padding-bottom: 5em;"></div>
   
 
