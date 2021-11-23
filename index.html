@@ -103,78 +103,8 @@
         >You can only use alphabetic characters, hyphens and apostrophes</span
       >
     </fieldset>
-    <fieldset>
-      <label for="email">Email</label>
-      <input
-        type="text"
-        name="email"
-        id="email"
-        onblur="validateEmail(value)"
-      />
-      <span id="emailError" style="display: none"
-        >You must enter a valid email address</span
-      >
-    </fieldset>
-    <fieldset>
-      <label for="animal">Favourite Animal</label>
-      <select name="animal" id="animal" onblur="validateSelect(name)">
-        <option value="">Animals</option>
-        <option value="cat">Cat</option>
-        <option value="dog">Dog</option>
-        <option value="badger">Badger</option>
-      </select>
-      <span class="validateError" id="animalError" style="display: none"
-        >You must select your favourite animal</span
-      >
-    </fieldset>
-    <fieldset>
-      <label for="hand">Left or Right handed?</label>
-      <ul>
-        <li>
-          <input
-            type="radio"
-            name="hand"
-            id="left"
-            value="Left"
-            onblur="validateRadio(id)"
-          />
-          <label for="left">Left handed</label>
-        </li>
-        <li>
-          <input
-            type="radio"
-            name="hand"
-            id="right"
-            value="Right"
-            onblur="validateRadio(id)"
-          />
-          <label for="right">Right handed</label>
-        </li>
-      </ul>
-      <span class="validateError" id="handError" style="display: none"
-        >Which hand do you use?</span
-      >
-    </fieldset>
-    <fieldset>
-      <label for="terms">Terms and Conditions</label>
-      <ul>
-        <li>
-          <input
-            type="checkbox"
-            name="terms"
-            id="accept"
-            value="accept"
-            onblur="validateCheckbox(id)"
-          />
-          <label for="accept"
-            >Accept our <a href="#">Terms and Conditions</a></label
-          >
-        </li>
-      </ul>
-      <span class="validateError" id="termsError" style="display: none"
-        >You need to accept our terms and conditions</span
-      >
-    </fieldset>
+    
+    
     <fieldset>
       <input type="submit" id="submit" name="submit" value="Submit" />
     </fieldset>
