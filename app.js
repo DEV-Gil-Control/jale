@@ -1,20 +1,7 @@
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
-var push_to_firebase = function(data){  
-  
-        alert("Registro creado exitosamente, espera noticias pronto")
-        var db = firebase.firestore();
-        db.collection("messages").add({
-          
-      if(document.getElementById('nombres').value == "tushar"){
-      alert("success");
-      return true;
-     }
-     else{
-        alert("failed");
-        return false;
-     }
+
            
             apaterno: data["apaterno"],
             amaterno: data["amaterno"],
