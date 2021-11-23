@@ -1,12 +1,3 @@
-$(document).ready(function () {
-
-//disable submit button until a button we added is clicked
-    $('.Submit').attr('disabled', 'disabled');
-    $('#donebutton').click(function () {
-        $('.Submit').removeAttr('disabled');
-    })
-
-
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 //Unique Firebase Object
