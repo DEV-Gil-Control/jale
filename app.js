@@ -14,7 +14,7 @@ function validateName(x) {
     // Show error prompt
     document.getElementById(x + 'Error').style.display = "block";
     return false;
-    }
+
     
     // Set error catcher
     var error = 0;
@@ -22,12 +22,12 @@ function validateName(x) {
     if (!validateName('name')) {
     document.getElementById('nameError').style.display = "block";
     error++;
-    }
+
    
     // Don't submit form if there are errors
     if (error > 0) {
     return false;
-    };
+
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
