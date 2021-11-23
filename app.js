@@ -1,108 +1,136 @@
-function printError(elemId, hintMsg) {
-    document.getElementById(elemId).innerHTML = hintMsg;
-}
-
-// Defining a function to validate form 
-function validateForm() {
-    // Retrieving the values of form elements 
-    var name = document.ApplicationForm.name.value;
-    var email = document.ApplicationForm.email.value;
-    var mobile = document.ApplicationForm.mobile.value;
-    var country = document.ApplicationForm.country.value;
-    var gender = document.ApplicationForm.gender.value;
-    var hobbies = [];
-    var checkboxes = document.getElementsByName("hobbies[]");
-    for(var i=0; i < checkboxes.length; i++) {
-        if(checkboxes[i].checked) {
-            // Populate hobbies array with selected values
-            hobbies.push(checkboxes[i].value);
-        }
-    }
-    
-	// Defining error variables with a default value
-    var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
-    
-    // Validate name
-    if(name == "") {
-        printError("nameErr", "Please enter your name");
-    } else {
-        var regex = /^[a-zA-Z\s]+$/;                
-        if(regex.test(name) === false) {
-            printError("nameErr", "Please enter a valid name");
-        } else {
-            printError("nameErr", "");
-            nameErr = false;
-        }
-    }
+*
+ * requiredfield jquery widget
+ *
+ * Copyright 2011, Acatl Pacheco
+ * Licensed under the MIT License.
+ *
+ */
 
 
-     // Validate Email
- 
-    if(email == "") {
-        printError("emailErr", "Please enter your email address");
-    } else {
-        // Regular expression for basic email validation
-         var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        if(regex.test(email) === false) {
-            printError("emailErr", "Please enter a valid email address");
-        } else{
-            printError("emailErr", "");
-            emailErr = false;
-        }
-    }
-    
-    
-    // Validate mobile number
-    
-     if(mobile == "") {
-        printError("mobileErr", "Please enter your mobile number");
-    } else {
-        var regex = /^[1-9]\d{9}$/;
-        if(regex.test(mobile) === false) {
-            printError("mobileErr", "Please enter a valid 10 digit mobile number");
-        } else{
-            printError("mobileErr", "");
-            mobileErr = false;
-        }
-    }
-    
+$.widget("ui.requiredfield", {
+	options : {
+		isRequired : true,
+		requiredClass : "required",
+		watermarkText : null,
+		watermarkClass : "watermark",
+		functionValidate : null,
+		dataType : "string",
+		liveCheck : false,
+		leaveWatermark:false,
+		defaultIsInvalid:false
+	},
 
+	_create : function() {
+		this.element.focus($.proxy(this._focusHandler, this));
+		this.element.blur($.proxy(this._blurHandler, this));
+		if (this.options.liveCheck) {
+			this.element.keyup($.proxy(this._keyupHandler, this));
+		}
+	},
 
-    
-    // Validate country
-    if(country == "Select") {
-        printError("countryErr", "Please select your country");
-    } else {
-        printError("countryErr", "");
-        countryErr = false;
-    }
-    
-    // Validate gender
-    if(gender == "") {
-        printError("genderErr", "Please select your gender");
-    } else {
-        printError("genderErr", "");
-        genderErr = false;
-    }
-    
-    // Prevent the form from being submitted if there are any errors
-    if((nameErr || emailErr || mobileErr || countryErr || genderErr) == true) {
-       return false;
-    } else {
-        // Creating a string from input data for preview
-        var dataPreview = "You've entered the following details: \n" +
-                          "Full Name: " + name + "\n" +
-                          "Email Address: " + email + "\n" +
-                          "Mobile Number: " + mobile + "\n" +
-                          "Country: " + country + "\n" +
-                          "Gender: " + gender + "\n";
-        if(hobbies.length) {
-            dataPreview += "Hobbies: " + hobbies.join(", ");
-        }
-        // Display input data in a dialog box before submitting the form
-        alert(dataPreview);
-    }
-};
+	_init : function() {
+		if (this.options.watermarkText != null) {
+			this._updateWatermark();
+		}
+	},
+
+	_focusHandler : function(e) {
+		var value = this.element.val();
+		if (value == this.options.watermarkText && !this.options.leaveWatermark) {
+			this.element.val("");
+		}
+		this.element.toggleClass(this.options.watermarkClass, false);
+		
+		if ( this.options.leaveWatermark ) {
+		}
+	},
+
+	_blurHandler : function(e) {
+		this._updateWatermark();
+		this._updateValidation();
+	},
+
+	_keyupHandler : function(e) {
+		this._updateValidation();
+	},
+
+	_updateValidation : function() {
+		this.validate();
+	},
+
+	_updateWatermark : function() {
+
+		if (this.options.watermarkText == null)
+			return;
+
+		var value = this.element.val();
+		var watermarkIt = false;
+		if (value == "" || value == this.options.watermarkText) {
+			watermarkIt = true;
+			this.element.val(this.options.watermarkText);
+		}
+		this.element.toggleClass(this.options.watermarkClass, watermarkIt);
+	},
+	
+	refresh: function () {
+		if (arguments[0] == true) {
+			this.element.val("");
+		}
+		if (this.options.watermarkText != null) {
+			this._updateWatermark();
+		}
+		this.element.toggleClass(this.options.requiredClass, false);
+	},
+
+	validate : function() {
+		var valid = true;
+		if (this.options.isRequired) {
+			valid = this.isValid();
+		}
+		this.element.toggleClass(this.options.requiredClass, !valid);
+		
+		return valid;
+	},
+
+	isValid : function() {
+		var value = this.element.val();
+
+		var valid = true;
+
+		if (value == "") {
+			return false;
+		}
+		
+		if (this.options.defaultIsInvalid == true && value == this.options.watermarkText) {
+			return false;
+		}
+
+		var dataTypeValid = true;
+		if (this.options.dataType != null) {
+			var val = null;
+			switch (this.options.dataType) {
+				case "number":
+					dataTypeValid = !isNaN(Number(value));
+					break;
+				case "string":
+				default:
+					dataTypeValid = jQuery.type(value) == this.options.dataType;
+					break;
+			}
+
+			if (!dataTypeValid)
+				return false;
+		}
+
+		var functionValidateValid = true;
+		if (this.options.functionValidate != null) {
+			functionValidateValid = this.options.functionValidate(this.element.val());
+		}
+
+		return dataTypeValid && functionValidateValid;
+	}
+
+});
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
