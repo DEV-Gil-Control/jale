@@ -1,13 +1,3 @@
-function toSubmit(){
-     if(document.getElementById('nombres').value == "tushar"){
-      alert("success");
-      return true;
-     }
-     else{
-        alert("failed");
-        return false;
-     }
-   }
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
@@ -44,6 +34,16 @@ var push_to_firebase = function(data){
       }
 
       var contact_submit = function(){
+           
+                if(document.getElementById('nombres').value == "tushar"){
+      alert("success");
+      return true;
+     }
+     else{
+        alert("failed");
+        return false;
+     }
+   }
          
          
          var apaterno = document.getElementById("apaterno");
@@ -84,6 +84,8 @@ var push_to_firebase = function(data){
           "nombres": nombres.value,
            "comentario": comentario.value
         }
+        
+        
         push_to_firebase(data);
 };
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
