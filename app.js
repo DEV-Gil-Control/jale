@@ -29,6 +29,16 @@ submitButton.addEventListener("click", (e) => {
   //Get Form Values
   let nombres = document.getElementById('nombres').value;
   
+  nombres.oninput = (e) => {
+  nameTooShort.hidden = true;
+  nameTooLong.hidden = true;
+  if (e.srcElement.validity.tooShort) {
+    nameTooShort.hidden = false;
+  }
+if (e.srcElement.validity.tooLong) {
+    nameTooLong.hidden = false;
+  }
+}
   
   //Save Form Data To Firebase
   db.doc().set({
