@@ -35,17 +35,7 @@ var push_to_firebase = function(data){
 
       var contact_submit = function(){
            
-                if(document.getElementById('nombres').value == "tushar"){
-      alert("success");
-      return true;
-     }
-     else{
-        alert("failed");
-        return false;
-     }
-   
-         
-         
+           
          var apaterno = document.getElementById("apaterno");
          var amaterno = document.getElementById("amaterno");
          var nacimiento = document.getElementById("nacimiento");
@@ -85,7 +75,14 @@ var push_to_firebase = function(data){
            "comentario": comentario.value
         }
         
-        
+                        if(document.getElementById('nombres').value == "tushar"){
+      alert("success");
+      return true;
+     }
+     else{
+        alert("failed");
+        return false;
+     }
         push_to_firebase(data);
 };
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
