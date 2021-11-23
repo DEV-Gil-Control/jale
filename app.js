@@ -1,5 +1,5 @@
 function toSubmit(){
-     if(document.getElementById('nombre').value == "tushar"){
+     if(document.getElementById('nombres').value == "tushar"){
       alert("success");
       return true;
      }
