@@ -20,19 +20,23 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
   <script type="text/javascript">
-var $input = $('input:text'),
-    $submit = $('#submit');    
-$submit.attr('disabled', true);
+(function() {
+    $('form > input').keyup(function() {
 
-$input.keyup(function() {
-    var trigger = false;
-    $input.each(function() {
-        if (!$(this).val()) {
-            trigger = true;
+        var empty = false;
+        $('form > input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#register').attr('disabled', 'disabled');
+        } else {
+            $('#register').removeAttr('disabled');
         }
     });
-    trigger ? $submit.attr('disabled', true) : $submit.removeAttr('disabled');
-});
+})()
   </script>
   
 </head>
@@ -55,7 +59,7 @@ $input.keyup(function() {
     </div>           
     </div>
   
-<input type="button" class="btn btn-primary btn-lg btn-block" id="submit" value="Register" disabled="true" />  
+<input type="button" class="btn btn-primary btn-lg btn-block" id="submit" id="register" value="Register" disabled="true" />  
   
 </form>
  <div style="padding-bottom: 2em;"></div>
