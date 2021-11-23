@@ -1,64 +1,11 @@
-function checkForm() {
-  hideAllErrors();
-  var formIsValid =
-    showErrorAndFocusIf('name', isEmpty, 'nameError')
-    && showErrorAndFocusIf('FieldData2', isEmpty, 'emailError')
-    && showErrorAndFocusIf('FieldData2', isAnInvalidEmail, 'emailError2')
-    && showErrorAndFocusIf('FieldData3', isEmpty, 'categoryError')
-    && showErrorAndFocusIf('FieldData1', isEmpty, 'questionError');
+$(document).ready(function () {
 
-  /* For debugging, lets prevent the form from submitting. */
-  if (formIsValid) {
-    alert("Valid form!");
-    return false;
-  }
+//disable submit button until a button we added is clicked
+    $('.Submit').attr('disabled', 'disabled');
+    $('#donebutton').click(function () {
+        $('.Submit').removeAttr('disabled');
+    })
 
-  return formIsValid;
-}
-
-function showErrorAndFocusIf(fieldId, predicate, errorId) {
-  var field = document.getElementById(fieldId);
-  if (predicate(field)) {
-    document.getElementById(errorId).style.display = 'inline';
-    if (field.select) {
-      field.select();
-    }
-    field.focus();
-    return false;
-  }
-
-  return true;
-}
-
-function isEmpty(field) {
-  return field.value == '';
-}
-
-function isAnInvalidEmail(field) {
-  var email = field.value;
-
-  var ok = "1234567890qwertyuiop[]asdfghjklzxcvbnm.@-_QWERTYUIOPASDFGHJKLZXCVBNM";
-
-  for(i = 0; i < email.length; i++){
-    if(ok.indexOf(email.charAt(i)) < 0) {
-      return true;
-    }
-  }
-
-  re = /(@.*@)|(\.\.)|(^\.)|(^@)|(@$)|(\.$)|(@\.)/;
-  re_two = /^.+\@(\[?)[a-zA-Z0-9\-\.]+\.([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-  return re.test(email) || !re_two.test(email);
-}
-
-
-
-function hideAllErrors() {
-  document.getElementById("nameError").style.display = "none"
-  document.getElementById("emailError").style.display = "none"
-  document.getElementById("emailError2").style.display = "none"
-  document.getElementById("categoryError").style.display = "none"
-  document.getElementById("questionError").style.display = "none"
-}
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
