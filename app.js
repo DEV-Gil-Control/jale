@@ -75,14 +75,7 @@ var push_to_firebase = function(data){
            "comentario": comentario.value
         }
         
-                        if(document.getElementById('nombres').value == "tushar"){
-      alert("success");
-      return true;
-     }
-     else{
-        alert("failed");
-        return false;
-     }
+
         push_to_firebase(data);
 };
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
