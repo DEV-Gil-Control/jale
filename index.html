@@ -25,17 +25,23 @@
   <a class="navbar-brand" href="#">BIENVENIDO, ESPERO AYUDARTE A ENCONTRAR UN BUEN JALE</a>
 </nav>
 
-<form>
-  <div class="alert alert-primary" role="alert">
-  CUÉNTANOS QUIÉN ERES
-</div>
-  <div class="form-row">
-    <div class="form-group col-md-12">
-      <label for="nombres">Nombre(s)</label>
-      <input type="text" class="form-control" id="nombres" required>
-    </div>
-        </form>
-<button type="button" class="btn btn-primary btn-lg btn-block" id="submit">Enviar</button>
+<form class="cmxform" id="commentForm" method="get" action="">
+  <fieldset>
+    <legend>Please provide your name, email address (won't be published) and a comment</legend>
+    <p>
+      <label for="nombres">Name (required, at least 2 characters)</label>
+      <input id="nombres" name="name" minlength="2" type="text" required>
+    </p>
+    
+    
+    <p>
+      <input class="submit" type="submit" value="Submit">
+    </p>
+  </fieldset>
+</form>
+<script>
+$("#commentForm").validate();
+</script>
 
   
  <div style="padding-bottom: 5em;"></div>
@@ -45,6 +51,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js" crossorigin="anonymous"></script>
+  
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
   <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
