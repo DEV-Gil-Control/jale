@@ -35,7 +35,7 @@
     </div>           
     </div>
 
-<input type="submit" id="register" value="Register" disabled="disabled" />
+<input type="submit" id="submit" value="Register" disabled="disabled" />
 
 </form>
  <div style="padding-bottom: 2em;"></div>
@@ -67,9 +67,9 @@
         });
 
         if (empty) {
-            $('#register').attr('disabled', 'disabled');
+            $('#submit').attr('disabled', 'disabled');
         } else {
-            $('#register').removeAttr('disabled'); 
+            $('#submit').removeAttr('disabled'); 
         }
     });
 })()
