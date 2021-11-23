@@ -33,7 +33,7 @@
         if (empty) {
             $('#submit').attr('disabled', 'disabled');
         } else {
-            $('#submit').removeAttr('disabled'); 
+            $('#submit').changeAttr('enabled', 'enabled'); 
         }
     });
 })()
@@ -59,7 +59,7 @@
     </div>           
     </div>
   
-<input type="button" class="btn btn-primary btn-lg btn-block" id="submit" value="Register" enabled="enabled" />  
+<input type="button" class="btn btn-primary btn-lg btn-block" id="submit" value="Register" disabled="disabled" />  
   
 </form>
  <div style="padding-bottom: 2em;"></div>
