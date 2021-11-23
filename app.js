@@ -1,3 +1,10 @@
+ules: [
+        {
+            field: "nombres",
+            validation: "validateRequired",
+            errorMessage: "This field is mandatory"
+        },
+
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
