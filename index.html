@@ -1,63 +1,19 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta lang="es">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>@jaleconchale</title>
-  <meta name="description" content="Jale con Chale.">
-  <meta name="author" content="SitePoint">
-
-  <link rel="icon" href="/favicon.ico">
-  <!-- Latest compiled and minified CSS -->
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+  <meta charset="utf-8" />
+  <title>Validation tutorial</title>
+  <script>
+    function validateName(x) {
+  alert(document.getElementById(x).value);
+}
+  </script>
   
-  </head>
-
-<body>
-<div class="container">
-<img src="" class="img-fluid" alt="Responsive image">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">BIENVENIDO, ESPERO AYUDARTE A ENCONTRAR UN BUEN JALE</a>
-</nav>
-
-<form id="form">
- <div class="form-row">
-    <div class="form-group col-md-4">
-      <label for="nombres">Nombre(s)</label>
-      <input type="text" class="form-control" id="nombres" placeholder="Nombre o Nombres" required >
-      <div class="invalid-feedback">
-      Favor de llenar.
-    </div>
-  </div>
   
+  <form action="">
+  <fieldset>
+    <label for="nombres">Name</label>
+   <input type="text" name="nombres" id="nombres" onblur="validateName(name)" />
+  </fieldset>
 </form>
-
-  <button type="button" class="btn btn-primary btn-lg btn-block" id="submit"">Enviar</button>
- <div style="padding-bottom: 5em;"></div>
   
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js" crossorigin="anonymous"></script>
-  
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
- <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
-  
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-       https://firebase.google.com/docs/web/setup#config-web-app -->
-
-  <script defer src="app.js"></script>
-  
-
-
-</body>
 </html>
