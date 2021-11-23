@@ -31,7 +31,7 @@ function validateName(x) {
     if (error > 0) {
     return false;
     }
-    }
+
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 //Unique Firebase Object
