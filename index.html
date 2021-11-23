@@ -31,7 +31,7 @@
   <div class="form-row">
     <div class="form-group col-md-4">
       <label for="name">Nombre(s)</label>
-      <input type="text" class="form-control" id="name" required="required">
+      <input type="text" class="form-control" id="name">
     </div>           
     </div>
 
@@ -69,7 +69,7 @@
         if (empty) {
             $('#submit').attr('disabled', 'disabled');
         } else {
-            $('#submit').removeAttr('enable'); 
+            $('#submit').removeAttr('disabled'); 
         }
     });
 })()
