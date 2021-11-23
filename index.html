@@ -21,18 +21,19 @@
   
 
   <script type="text/javascript">
-    
-    $('#name').bind('keyup', function() {
-    if(allFilled()) $('#register').removeAttr('disabled');
-});
+var $input = $('input:text'),
+    $register = $('#register');    
+$register.attr('disabled', true);
 
-function allFilled() {
-    var filled = true;
-    $('body input').each(function() {
-        if($(this).val() == '') filled = false;
+$input.keyup(function() {
+    var trigger = false;
+    $input.each(function() {
+        if (!$(this).val()) {
+            trigger = true;
+        }
     });
-    return filled;
-}
+    trigger ? $register.attr('disabled', true) : $register.removeAttr('disabled');
+});
   </script>
   
 </head>
