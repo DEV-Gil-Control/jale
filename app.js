@@ -15,8 +15,6 @@ function validateName(x) {
     document.getElementById(x + 'Error').style.display = "block";
     return false;
     }
-    }
-    
     
     // Set error catcher
     var error = 0;
@@ -26,11 +24,10 @@ function validateName(x) {
     error++;
     }
    
-    
     // Don't submit form if there are errors
     if (error > 0) {
     return false;
-    }
+    };
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
