@@ -23,7 +23,7 @@
   <script type="text/javascript">
     
     $('#name').bind('keyup', function() {
-    if(allFilled()) $('#sumbit').removeProp('disabled');
+    if(allFilled()) $('#register').removeAttr('disabled');
 });
 
 function allFilled() {
@@ -54,7 +54,7 @@ function allFilled() {
       <input type="text" id="name" class="form-control" >
     </div>           
     </div>
-  
+ <input type="submit" id="register" disabled value="Register" /> 
 <button type="button" class="btn btn-primary btn-lg btn-block" id="submit" disabled>Enviar</button>
   
 </form>
