@@ -57,22 +57,13 @@
   <script defer src="app.js"></script>
   
    <script>
-    $().ready(function() {
-        $('#addNew').validate({
-            rules: {
-                nombres: "required",
-            },
-            messages: {
-                nombres: "Please enter first name",
-    
-            },
-            submitHandler: function(form) {
-                form.submit();
-            }
-    
-            // any other options and/or rules
-        });
-    });
+$(document)
+.on('click', 'form button[type=submit]', function(e) {
+    var isValid = $(e.target).parents('form').isValid();
+    if(!isValid) {
+      e.preventDefault(); //prevent the default action
+    }
+});
     </script>
 
 </body>
