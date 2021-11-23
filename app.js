@@ -10,7 +10,7 @@ function validateName(x) {
     return true;
     }else{
     // Style red
-    document.getElementById(x).style.background ='#e35152′;
+    
     // Show error prompt
     document.getElementById(x + 'Error').style.display = "block";
     return false;
