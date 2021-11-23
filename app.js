@@ -22,35 +22,34 @@
 
 //- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
-var push_to_firebase = function(data){
-        alert("Registro creado exitosamente, espera noticias pronto")
-        var db = firebase.firestore();
+//Initialize Firebase 
+firebase.initializeApp(firebaseConfig);
+var firestore = firebase.firestore()
 
-        db.collection("messages").add({
-           
-            nombres: data["nombres"],
-            timestamp: Date.now()
-        })
-        .then(function(docRef) {
-            console.log("Message sent, ID: ", docRef.id);
-            location.reload();
-        })
-        .catch(function(error) {
-            console.error("No se pudo enviar el mensaje: ", error);
-        });
-      }
+//Variable to access database collection
+const db = firestore.collection("messages")
 
-      var contact_submit = function(){
-           
-        var nombres = document.getElementById("nombres");
+//Get Submit Form
+let submitButton = document.getElementById('submit')
 
-        var data = {
-         
+//Create Event Listener To Allow Form Submission
+submitButton.addEventListener("click", (e) => {
+  //Prevent Default Form Submission Behavior
+  e.preventDefault()
 
-          "nombres": nombres.value
-        }
-        
+  //Get Form Values
+  let nombres = document.getElementById('nombres').value
 
-        push_to_firebase(data);
-};
+  //Save Form Data To Firebase
+  db.doc().set({
+    fname: nombres,
+  }).then( () => {
+    console.log("Data saved")
+  }).catch((error) => {
+    console.log(error)
+  })
+
+  //alert
+  alert("Your Form Has Been Submitted Successfully")
+})
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
