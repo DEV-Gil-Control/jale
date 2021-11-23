@@ -53,7 +53,7 @@ submitButton.addEventListener("click", (e) => {
 
   //Save Form Data To Firebase
   db.doc().set({
-    fname: nombres,
+    nombres: nombres,
   }).then( () => {
     console.log("Data saved")
   }).catch((error) => {
