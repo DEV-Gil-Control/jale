@@ -1,4 +1,4 @@
-ules: [
+rules: [
         {
             field: "nombres",
             validation: "validateRequired",
