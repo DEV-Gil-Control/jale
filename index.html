@@ -4,20 +4,25 @@
   <title>Validation tutorial</title>
 
 
-  <form action="" onsubmit="return validateForm()">
-    <fieldset>
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" onblur="validateName(name)" />
-      <span id="nameError" style="display: none"
-        >You can only use alphabetic characters, hyphens and apostrophes</span
-      >
-    </fieldset>
-    
-    
-    <fieldset>
-      <input type="submit" id="submit" name="submit" value="Submit" />
-    </fieldset>
-  </form>
+<form onSubmit="return checkForm();" method="post" name="form1"> 
+  <div> 
+    <div class="error" id="nameError"> 
+      Required: Please enter your name 
+    </div> 
+    <label for="name"><strong>Name:</strong></label> 
+    <input type="text" name="name" id="name" value="name" size="22" tabindex="1" /> 
+  </div> 
+
+  <div> 
+    <div class="error" id="questionError"> 
+      Please type your question in the box below: 
+    </div> 
+    <label for="FieldData1"><strong>Your Question:</strong></label> 
+    <textarea name="FieldData1" id="FieldData1" cols="50" rows="10"></textarea> 
+  </div> 
+
+  <input type="submit" class="btn" value="Submit Question" name="Submit"> 
+</form> 
   
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
