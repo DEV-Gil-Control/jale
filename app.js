@@ -12,14 +12,6 @@ var firebaseConfig = {
   appId: "1:125185951298:web:3b067709048a1a0edf0fdb"
 };
 
-$(document)
-.on('click', 'form button[type=submit]', function(e) {
-    var isValid = $(e.target).parents('form').isValid();
-    if(!isValid) {
-      e.preventDefault(); //prevent the default action
-    }
-});
-
 //Initialize Firebase 
 firebase.initializeApp(firebaseConfig);
 var firestore = firebase.firestore()
