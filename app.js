@@ -51,6 +51,18 @@ submitButton.addEventListener("click", (e) => {
     name: name,
     apaterno: apaterno,
     amaterno: amaterno,
+    nacimiento: nacimiento,
+    telefono: telefono,
+    email: email,
+    domicilio: domicilio,
+    colonia: colonia,
+    estado: estado,
+    municipio: municipio,
+    codigo: codigo,
+    turno: turno,
+    sueldomes: sueldomes,
+    comentario: comentario,
+    acepto: acepto,
   }).then( () => {
     console.log("Data saved")
   }).catch((error) => {
