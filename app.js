@@ -29,11 +29,15 @@ submitButton.addEventListener("click", (e) => {
   
   //Get Form Values
   let name = document.getElementById('name').value;
+  let apaterno = document.getElementById('apaterno').value;
+  let amaterno = document.getElementById('amaterno').value;
   
   
   //Save Form Data To Firebase
   db.doc().set({
     name: name,
+    apaterno: apaterno,
+    amaterno: amaterno,
   }).then( () => {
     console.log("Data saved")
   }).catch((error) => {
@@ -41,7 +45,7 @@ submitButton.addEventListener("click", (e) => {
   })
 
   //alert
-  alert("Your Form Has Been Submitted Successfully")
+  alert("Tus datos fueron enviados con éxito")
 })
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
