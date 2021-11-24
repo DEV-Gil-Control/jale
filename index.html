@@ -40,6 +40,14 @@ CUÉNTANOS QUIÉN ERES
       <label for="name">Nombre(s)</label>
       <input type="text" class="form-control" id="name">
      </div>
+  <div class="form-group col-md-4">
+      <label for="apaterno">Apellido Paterno</label>
+      <input type="text" class="form-control" id="apaterno">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="amaterno">Apellido Materno</label>
+      <input type="text" class="form-control" id="amaterno">
+    </div>   
   </div>
    
    
@@ -56,7 +64,7 @@ CUÉNTANOS QUIÉN ERES
 
  <script type="text/javascript">
 
-    $('#name').bind('keyup', function() {
+    $('#name, #apaterno, #amaterno').bind('keyup', function() {
     if(allFilled()) $('#submit').removeAttr('disabled');
 });
 
