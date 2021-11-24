@@ -33,7 +33,7 @@
 
  <form>
         Username<br />
-        <input type="text" id="user_input" name="username" /><br />
+        <input type="text" id="name" name="username" /><br />
    <input type="submit" id="submit" disabled value="Register" />
         </form>
 
@@ -41,7 +41,7 @@
 
  <script type="text/javascript">
 
-    $('#user_input').bind('keyup', function() {
+    $('#name').bind('keyup', function() {
     if(allFilled()) $('#submit').removeAttr('disabled');
 });
 
