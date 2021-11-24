@@ -13,12 +13,10 @@
   <link rel="icon" href="/favicon.ico">
   <!-- Latest compiled and minified CSS -->
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  
-
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
   <script type="text/javascript">
 
     $('#user_input, #pass_input, #v_pass_input, #email').bind('keyup', function() {
@@ -38,11 +36,7 @@ function allFilled() {
 </head>
 
 <body>
-<div class="container">
-<img src="jaleconchale.png" class="img-fluid" alt="Responsive image">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">BIENVENIDO, ESPERO AYUDARTE A ENCONTRAR UN BUEN JALE</a>
-</nav>
+
 
  <form>
         Username<br />
@@ -55,18 +49,11 @@ function allFilled() {
         <input type="text" id="email" name="email" /><br />     
         <input type="submit" id="register" disabled value="Register" />
         </form>
-<button type="button" class="btn btn-primary btn-lg btn-block" id="submit">Enviar</button>
+
   
- <div style="padding-bottom: 2em;"></div>
+
  
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
- <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
-  
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-       https://firebase.google.com/docs/web/setup#config-web-app -->
-  <script defer src="app.js"></script>
+
   
 </body>
 </html>
