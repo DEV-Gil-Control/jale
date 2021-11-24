@@ -2,36 +2,12 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta lang="es">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>@jaleconchale</title>
-  <meta name="description" content="Jale con Chale.">
-  <meta name="author" content="SitePoint">
-
-  <link rel="icon" href="/favicon.ico">
-  <!-- Latest compiled and minified CSS -->
-
+  
   <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
-  <script type="text/javascript">
-
-    $('#user_input, #pass_input, #v_pass_input, #email').bind('keyup', function() {
-    if(allFilled()) $('#register').removeAttr('disabled');
-});
-
-function allFilled() {
-    var filled = true;
-    $('body input').each(function() {
-        if($(this).val() == '') filled = false;
-    });
-    return filled;
-}
-    
-  </script>
+  
   
 </head>
 
@@ -52,7 +28,21 @@ function allFilled() {
 
   
 
- 
+ <script type="text/javascript">
+
+    $('#user_input, #pass_input, #v_pass_input, #email').bind('keyup', function() {
+    if(allFilled()) $('#register').removeAttr('disabled');
+});
+
+function allFilled() {
+    var filled = true;
+    $('body input').each(function() {
+        if($(this).val() == '') filled = false;
+    });
+    return filled;
+}
+    
+  </script>
 
   
 </body>
