@@ -42,9 +42,7 @@ submitButton.addEventListener("click", (e) => {
   let codigo = document.getElementById('codigo').value;
   let turno = document.getElementById('turno').value;
   let sueldomes = document.getElementById('sueldomes').value;
-  let comentario = document.getElementById('comentario').value;
-  let acepto = document.getElementById('acepto').value;
-  
+  let comentario = document.getElementById('comentario').value;  
   
   //Save Form Data To Firebase
   db.doc().set({
@@ -62,7 +60,6 @@ submitButton.addEventListener("click", (e) => {
     turno: turno,
     sueldomes: sueldomes,
     comentario: comentario,
-    acepto: acepto,
   }).then( () => {
     console.log("Data saved")
   }).catch((error) => {
