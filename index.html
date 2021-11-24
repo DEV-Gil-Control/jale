@@ -21,23 +21,19 @@
   
 
   <script type="text/javascript">
-(function() {
-    $('form > input').keyup(function() {
 
-        var empty = false;
-        $('form > input').each(function() {
-            if ($(this).val() == '') {
-                empty = true;
-            }
-        });
+    $('#user_input, #pass_input, #v_pass_input, #email').bind('keyup', function() {
+    if(allFilled()) $('#register').removeAttr('disabled');
+});
 
-        if (empty) {
-            $('#register').attr('disabled', 'disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-        } else {
-            $('#register').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-        }
+function allFilled() {
+    var filled = true;
+    $('body input').each(function() {
+        if($(this).val() == '') filled = false;
     });
-})()
+    return filled;
+}
+    
   </script>
   
 </head>
@@ -49,17 +45,17 @@
   <a class="navbar-brand" href="#">BIENVENIDO, ESPERO AYUDARTE A ENCONTRAR UN BUEN JALE</a>
 </nav>
 
-<form>
-    Username<br />
-    <input type="text" id="user_input" name="username" /><br />
-    Password<br />
-    <input type="text" id="pass_input" name="password" /><br />
-    Confirm Password<br />
-    <input type="text" id="v_pass_input" name="v_password" /><br />
-    Email<br />
-    <input type="text" id="email" name="email" /><br />     
-    <input type="submit" id="register" value="Register" disabled="disabled" />
-</form>
+ <form>
+        Username<br />
+        <input type="text" id="user_input" name="username" /><br />
+        Password<br />
+        <input type="text" id="pass_input" name="password" /><br />
+        Confirm Password<br />
+        <input type="text" id="v_pass_input" name="v_password" /><br />
+        Email<br />
+        <input type="text" id="email" name="email" /><br />     
+        <input type="submit" id="register" disabled value="Register" />
+        </form>
 <button type="button" class="btn btn-primary btn-lg btn-block" id="submit">Enviar</button>
   
  <div style="padding-bottom: 2em;"></div>
