@@ -52,6 +52,7 @@ submitButton.addEventListener("click", (e) => {
     nacimiento: nacimiento,
     telefono: telefono,
     email: email,
+    estudios: estudios,
     domicilio: domicilio,
     colonia: colonia,
     estado: estado,
