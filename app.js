@@ -31,6 +31,19 @@ submitButton.addEventListener("click", (e) => {
   let name = document.getElementById('name').value;
   let apaterno = document.getElementById('apaterno').value;
   let amaterno = document.getElementById('amaterno').value;
+  let nacimiento = document.getElementById('nacimiento').value;
+  let telefono = document.getElementById('telefono').value;
+  let email = document.getElementById('email').value;
+  let estudios = document.getElementById('estudios').value;
+  let domicilio = document.getElementById('domicilio').value;
+  let colonia = document.getElementById('colonia').value;
+  let estado = document.getElementById('estado').value;
+  let municipio = document.getElementById('municipio').value;
+  let codigo = document.getElementById('codigo').value;
+  let turno = document.getElementById('turno').value;
+  let sueldomes = document.getElementById('sueldomes').value;
+  let comentario = document.getElementById('comentario').value;
+  let acepto = document.getElementById('acepto').value;
   
   
   //Save Form Data To Firebase
