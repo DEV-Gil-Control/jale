@@ -34,20 +34,13 @@
  <form>
         Username<br />
         <input type="text" id="user_input" name="username" /><br />
-        Password<br />
-        <input type="text" id="pass_input" name="password" /><br />
-        Confirm Password<br />
-        <input type="text" id="v_pass_input" name="v_password" /><br />
-        Email<br />
-        <input type="text" id="email" name="email" /><br />     
-        <input type="submit" id="register" disabled value="Register" />
         </form>
 
 </div>  
 
  <script type="text/javascript">
 
-    $('#user_input, #pass_input, #v_pass_input, #email').bind('keyup', function() {
+    $('#user_input,').bind('keyup', function() {
     if(allFilled()) $('#register').removeAttr('disabled');
 });
 
