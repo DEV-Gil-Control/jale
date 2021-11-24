@@ -21,19 +21,23 @@
   
 
   <script type="text/javascript">
-var $input = $('input:text'),
-    $register = $('#register');
+(function() {
+    $('form > input').keyup(function() {
 
-$register.attr('disabled', true);
-$input.keyup(function() {
-    var trigger = false;
-    $input.each(function() {
-        if (!$(this).val()) {
-            trigger = true;
+        var empty = false;
+        $('form > input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#register').attr('disabled', 'disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+        } else {
+            $('#register').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
         }
     });
-    trigger ? $register.attr('disabled', true) : $register.removeAttr('disabled');
-});
+})()
   </script>
   
 </head>
@@ -54,7 +58,7 @@ $input.keyup(function() {
     <input type="text" id="v_pass_input" name="v_password" /><br />
     Email<br />
     <input type="text" id="email" name="email" /><br />     
-    <input type="submit" id="register" value="Register" />
+    <input type="submit" id="register" value="Register" disabled="disabled" />
 </form>
 <button type="button" class="btn btn-primary btn-lg btn-block" id="submit">Enviar</button>
   
