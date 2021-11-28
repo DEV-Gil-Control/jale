@@ -227,6 +227,7 @@ Nullam vel nibh placerat, ultrices quam nec, blandit nisi. Interdum et malesuada
 
     $('#name, #apaterno, #amaterno, #nacimiento, #telefono, #email, #estudios, #domicilio, #colonia, #estado, #municipio, #codigo, #turno, #sueldomes').bind('change', function() {
     if(allFilled()) $('#submit').removeAttr('disabled');
+    if else (document.form.estudios.value == "") $('#submit').removeAttr('disabled');
 });
    
 function allFilled() {
@@ -237,22 +238,7 @@ function allFilled() {
     return filled;
 }
       </script>
-  
- <script type="text/javascript"> 
-   
-   $('#estudios').bind('change', function() {
-   if (document.form.estudios.value == "") $('#submit').removeAttr('disabled');
-});   
-   
-function allFilled() {
-    var filled = true;
-    $('body input').each(function() {
-        if($(this).val() == '') filled = false;
-    });
-    return filled;
-}   
-   
-  </script>
+ 
 
   <div style="padding-bottom: 2em;"></div>
 
