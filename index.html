@@ -227,7 +227,7 @@ Nullam vel nibh placerat, ultrices quam nec, blandit nisi. Interdum et malesuada
 
     $('#name, #apaterno, #amaterno, #nacimiento, #telefono, #email, #estudios, #domicilio, #colonia, #estado, #municipio, #codigo, #turno, #sueldomes').bind('change', function() {
     if(allFilled()) $('#submit').removeAttr('disabled');
-    if else (document.form.estudios.value == "") $('#submit').removeAttr('disabled');
+    else if (document.form.estudios.value == "") $('#submit').removeAttr('disabled');
 });
    
 function allFilled() {
