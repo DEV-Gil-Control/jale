@@ -82,7 +82,7 @@ CUÉNTANOS QUIÉN ERES
 
 <div class="form-group col-md-12">
       <label for="estudios">Selecciona tu último grado de estudios</label>
-      <select name="selector" id="estudios" class="form-control">
+      <select id="estudios" class="form-control">
         <option value="" selected disabled hidden> -- selecciona -- </option>
         <option>Primaria</option>
 <option>Secundaria</option>
@@ -229,7 +229,7 @@ Nullam vel nibh placerat, ultrices quam nec, blandit nisi. Interdum et malesuada
     if(allFilled()) $('#submit').removeAttr('disabled');
 });
 
-   if (document.form.selector.value == "") $('#submit').removeAttr('disabled');
+   if (document.form.estudios.value == "") $('#submit').removeAttr('disabled');
    
 function allFilled() {
     var filled = true;
