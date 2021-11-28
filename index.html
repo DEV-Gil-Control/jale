@@ -85,11 +85,11 @@ CUÉNTANOS QUIÉN ERES
       <select id="estudios" class="form-control">
         <option disabled selected value> -- selecciona -- </option>
         <option>Primaria</option>
-<option id="secundaria">Secundaria</option>
-<option id="bachiller">Bachiller</option>
-<option id="tecnica">Técnica</option>
-<option id="licenciatura">Licenciatura</option>
-<option id="otros">Otros</option>
+<option>Secundaria</option>
+<option>Bachiller</option>
+<option>Técnica</option>
+<option>Licenciatura</option>
+<option>Otros</option>
 
       </select>
     </div>
@@ -223,7 +223,7 @@ Nullam vel nibh placerat, ultrices quam nec, blandit nisi. Interdum et malesuada
  </script>-->  
  <script type="text/javascript"> 
 
-    $('#primaria, #secundaria, #bachiller, #licenciatura, #otros, #name, #apaterno, #amaterno, #nacimiento, #telefono, #email, #estudios, #domicilio, #colonia, #estado, #municipio, #codigo, #turno, #sueldomes').bind('change', function() {
+    $('#name, #apaterno, #amaterno, #nacimiento, #telefono, #email, #estudios, #domicilio, #colonia, #estado, #municipio, #codigo, #turno, #sueldomes').bind('change', function() {
     if(allFilled()) $('#submit').removeAttr('disabled');
 });
 
